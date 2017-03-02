@@ -1,0 +1,30 @@
+import java.util.Random;
+public class main {
+	static int i;
+	static int n;
+public static void main(String args[]){
+	int number[]=new int[60];
+	char fu[]=new char[30];
+	char c[]={'+','-','*','/'};
+
+	for(i=0;i<60;i++)
+		{
+		int x=(int)(Math.random()*100);
+		number[i]=x;
+		}
+	for(i=0;i<30;i++)
+	{
+		Random random=new Random();
+		int index=random.nextInt(c.length);
+		char resultChar=c[index];
+		fu[i]=resultChar;
+	}
+	for(n=0;n<30;n++)
+		{
+	 System.out.print(number[n]);
+	 System.out.print(fu[n]);
+	 System.out.print(number[2*n]);
+	 System.out.println(" =");
+		}
+}
+}
